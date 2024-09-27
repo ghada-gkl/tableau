@@ -37,7 +37,7 @@ function ajouterLivreTable(titre, auteur, prix, index){
     const btnSupprimer = document.createElement('button');
     btnSupprimer.textContent = 'Supprimer';
     btnSupprimer.addEventListener('click', function() {
-        supprimerbook(index);
+        supprimerlivre(index);
     });
     celluleActions.appendChild(btnSupprimer);
 
@@ -69,7 +69,7 @@ function editerLivre(i) {
     document.getElementById('auteur').value = books[i].auteur;
     document.getElementById('prix').value = books[i].prix;
     document.getElementById('ajouterButton').textContent = 'editer Livre';
-    i2 = i;
+    i= index;
 }
 
 function resetForm() {
