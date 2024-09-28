@@ -1,12 +1,18 @@
 var books = [];
 var i = -1;
 
-function ajouter(){
-    var titre = document.getElementById('titre').value;
-    var auteur = document.getElementById('auteur').value;
-    var prix = document.getElementById('prix').value;
 
-    if (i ==-1) {
+function ajouter() {
+    var titre = document.getElementById('titre').value.trim();
+    var auteur = document.getElementById('auteur').value.trim();
+    var prix = document.getElementById('prix').value.trim();
+
+    if (titre === "" || auteur === "" || prix === "") {
+        alert("Veuillez remplir tous les champs !");
+        return;
+    }
+
+    if (i === -1) {
         books.push({ titre, auteur, prix });
     } else {
         books[i] = { titre, auteur, prix };
